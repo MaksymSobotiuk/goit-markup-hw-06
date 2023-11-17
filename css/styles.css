@@ -152,7 +152,6 @@ body {
 
     .mobile-menu-navigation-link {
         color: #2E2F42;
-        font-family: Roboto;
         font-size: 36px;
         font-weight: 700;
         line-height: 1.11;
@@ -171,8 +170,6 @@ body {
     }
 
     .mobile-menu-adress-list-link {
-        color: #434455;
-        font-family: Roboto;
         font-size: 20px;
         font-weight: 500;
         font-style: normal;
@@ -300,7 +297,6 @@ screen and (min-device-pixel-ratio: 2) {
 
 .hero-title {
     text-align: center;
-    font-family: Roboto;
     font-size: 36px;
     font-style: normal;
     font-weight: 700;
@@ -339,6 +335,41 @@ screen and (min-device-pixel-ratio: 2) {
 
 /*/mobile-hero-styles */
 
+
+/* Mobile-featires-styles */
+.features-icone-container {
+    display: none;
+}
+
+.features-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 72px;
+    align-items: center;
+    justify-content: center;
+}
+
+.features-title {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #2E2F42;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.features-text {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+/* /Mobile-featires-styles */
 
 /* /Mobile-styles */
 
@@ -475,6 +506,29 @@ screen and (min-device-pixel-ratio: 2) {
     }
 
     /* /Hero-tablet-styles */
+
+    /* Tablet-featires-styles */
+    /* .features-list {
+        max-width: 736px;
+    } */
+
+    .features-list {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        column-gap: 24px;
+        row-gap: 72px;
+    }
+
+    .features-item {
+        flex: 0 0 calc((100% - 24px) / 2);
+    }
+
+    .features-title {
+        text-align: left;
+    }
+
+    /* /Tablet-featires-styles */
 }
 
 
@@ -519,6 +573,43 @@ screen and (min-device-pixel-ratio: 2) {
     }
 
     /* /Hero-Desctop-styles */
+
+
+    /* Desctop-featires-styles */
+
+    .features-icone-container {
+        display: block;
+    }
+
+    .features-icone-container {
+        width: 264px;
+        height: 112px;
+        border-radius: 4px;
+        border: 1px solid #8E8F99;
+        background: #F4F4FD;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 8px;
+    }
+
+    .features-list {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        column-gap: 24px;
+    }
+
+    .features-item {
+        width: calc((100% - 72px) / 4);
+        flex: none;
+    }
+
+    .features-text {
+        font-weight: 400;
+    }
+
+    /* /Desctop-featires-styles */
 }
 
 /* /Desctop-styles */

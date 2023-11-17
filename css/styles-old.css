@@ -228,15 +228,6 @@ body {
 
 /* ===============/Hero-styles=============================== */
 /* ===============Features-styles=============================== */
-.features-title {
-    color: #2E2F42;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    margin-bottom: 8px;
-}
-
 .features-list {
     display: flex;
     gap: 24px;
@@ -244,6 +235,16 @@ body {
 
 .features-item {
     width: calc((100% - 72px) / 4);
+}
+
+
+.features-title {
+    color: #2E2F42;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
 }
 
 .features-text {
