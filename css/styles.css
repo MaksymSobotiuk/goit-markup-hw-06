@@ -747,6 +747,247 @@ screen and (min-device-pixel-ratio: 2) {
 
 /* /Mobile-footer-styles */
 
+/* Mobile-backdrop-styles */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999999999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.40);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+}
+
+.modal {
+    width: 288px;
+    min-height: 584px;
+    background-color: #FCFCFC;
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 72px;
+    padding-bottom: 24px;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-button {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    line-height: 0;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #E7E9FC;
+    fill: #2E2F42;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-button-icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-button:hover,
+.modal-close-button:focus {
+    background-color: #404BBF;
+    border: 0;
+}
+
+.modal-close-button:hover .modal-close-button-icon,
+.modal-close-button:focus .modal-close-button-icon {
+    fill: #FFFFFF;
+}
+
+.review-form-text {
+    color: #2E2F42;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
+}
+
+.review-form-fierl-label {
+    display: block;
+    color: #8E8F99;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    margin-bottom: 4px;
+}
+
+.review-form-field {
+    width: 100%;
+    height: 40px;
+    border: 1px solid;
+    border-radius: 4px;
+    border-color: rgba(46, 47, 66, 0.4);
+    padding-left: 38px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: transparent;
+    outline: transparent;
+}
+
+.review-form-field-wrapper {
+    margin-bottom: 8px;
+}
+
+.review-form-field-wrappe-coment {
+    margin-bottom: 16px;
+}
+
+.review-form-field-icon {
+    fill: #2E2F42;
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.review-form-input-wrapper {
+    position: relative;
+
+}
+
+.review-form-field:focus {
+    border-color: #4D5AE5;
+    outline-color: transparent;
+    outline-offset: 4px;
+}
+
+.review-form-field:focus+.review-form-field-icon {
+    fill: #4D5AE5;
+}
+
+.review-form-massage {
+    width: 100%;
+    height: 120px;
+    resize: none;
+    border: 1px solid;
+    border-radius: 4px;
+    border-color: rgba(46, 47, 66, 0.4);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    color: rgba(46, 47, 66, 0.40);
+    background-color: transparent;
+    outline: transparent;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.review-form-massage::placeholder {
+    color: rgba(46, 47, 66, 0.40);
+}
+
+.review-form-massage:focus {
+    border-color: #4D5AE5;
+    outline-color: transparent;
+    outline-offset: 4px;
+}
+
+.review-form-checkbox-label {
+    color: #8E8F99;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+}
+
+.privacy-pocily-link {
+    color: #4D5AE5;
+    line-height: 1.33;
+}
+
+.review-form-own-checkbox {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    border: 1px solid rgba(46, 47, 66, 0.40);
+    cursor: pointer;
+    fill: transparent;
+    margin-right: 8px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.review-form-checkbox-wrapper {
+    margin-bottom: 24px;
+}
+
+.review-form-checkbox:checked+.review-form-checkbox-label .review-form-own-checkbox {
+    background-color: #404BBF;
+    fill: #F4F4FD;
+    border: none;
+}
+
+.review-form-checkbox:focus+.review-form-checkbox-label .review-form-own-checkbox {
+    outline: 1px solid rgba(0, 0, 255, 0.5);
+}
+
+.review-form-button {
+    background-color: #4D5AE5;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+    display: block;
+    min-width: 169px;
+    height: 56px;
+    border: none;
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
+}
+
+.review-form-button:hover,
+.review-form-button:focus {
+    background-color: #404BBF;
+}
+
+/* /Mobile-backdrop-styles */
 
 /* /Mobile-styles */
 
@@ -977,6 +1218,16 @@ screen and (min-device-pixel-ratio: 2) {
     }
 
     /* /Tablet-footer-styles */
+
+    /* Tablet-backdrop-styles */
+
+    .modal {
+        width: 408px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    /* /Tablet-backdrop-styles */
 }
 
 
@@ -1111,6 +1362,7 @@ screen and (min-device-pixel-ratio: 2) {
         padding-left: 0;
         padding-right: 0;
         max-width: 100%;
+        width: 1158px;
     }
 
     .logo-text-container {
