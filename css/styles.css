@@ -582,10 +582,12 @@ screen and (min-device-pixel-ratio: 2) {
 
 .page-footer {
     background-color: #2e2f42;
-    padding-top: 98px;
+    padding-top: 96px;
     padding-bottom: 96px;
-    padding-left: 16px;
-    padding-right: 16px;
+}
+
+.page-footer-container {
+    max-width: 100%;
 }
 
 .footer-logo {
@@ -597,6 +599,7 @@ screen and (min-device-pixel-ratio: 2) {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4D5AE5;
+    margin-bottom: 16px;
 }
 
 .logotype-footer-span {
@@ -611,26 +614,22 @@ screen and (min-device-pixel-ratio: 2) {
 }
 
 .page-footer-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 72px;
+    max-width: 320px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin: auto;
 }
 
 .logo-text-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    row-gap: 18px;
+    margin-bottom: 72px
 }
 
 .page-footer-icons-contaiter {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    row-gap: 16px;
+
+    margin-bottom: 72px;
 }
 
 .footer-icons-text {
@@ -639,11 +638,13 @@ screen and (min-device-pixel-ratio: 2) {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #FFFFFF;
-
+    text-align: center;
+    margin-bottom: 16px;
 }
 
 .footer-icons-list {
     display: flex;
+    justify-content: center;
     gap: 16px;
 }
 
@@ -673,22 +674,6 @@ screen and (min-device-pixel-ratio: 2) {
     fill: #F4F4FD;
 }
 
-.footer-form-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    row-gap: 16px;
-}
-
-.footer-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    row-gap: 16px;
-}
-
 .footer-form-text {
     color: #FFFFFF;
     font-family: Roboto;
@@ -696,15 +681,22 @@ screen and (min-device-pixel-ratio: 2) {
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+@media screen and (max-width: 767px) {
+
+    .footer-form-field {
+        width: 288px;
+    }
+
 }
 
 .footer-form-field {
-    width: 264px;
     height: 40px;
     border: 1px solid #ffffff;
     background-color: transparent;
-    opacity: 0.3;
-    font-family: Roboto;
     font-size: 12px;
     line-height: 1.5;
     letter-spacing: 0.04em;
@@ -712,11 +704,9 @@ screen and (min-device-pixel-ratio: 2) {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     color: #ffffff;
+    margin-bottom: 16px;
 }
 
-.footer-form-field::placeholder {
-    color: #FFFFFF;
-}
 
 .footer-sub-button {
     min-width: 165px;
@@ -734,6 +724,8 @@ screen and (min-device-pixel-ratio: 2) {
     background-color: #4D5AE5;
     border: none;
     border-radius: 4px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .footer-sub-button-icon {
@@ -1186,35 +1178,40 @@ screen and (min-device-pixel-ratio: 2) {
     /* /Tablet-portfotio-styles */
 
     /* Tablet-footer-styles */
-    .page-footer {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
 
     .page-footer-container {
-        flex-direction: row;
+        display: flex;
         flex-wrap: wrap;
-        column-gap: 24px;
+        gap: 72px 24px;
         max-width: 584px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .footer-form {
-        flex-direction: row;
-        column-gap: 24px;
     }
 
     .logo-text-container {
         align-items: flex-start;
+        margin-bottom: 0;
     }
 
     .page-footer-icons-contaiter {
-        align-items: flex-start;
+        margin-bottom: 0;
     }
 
-    .footer-form-wrapper {
-        align-items: flex-start;
+    .footer-icons-text {
+        text-align: left;
+    }
+
+
+    .footer-form-field {
+        width: 264px;
+    }
+
+    .footer-form {
+        display: flex;
+        column-gap: 24px;
+        max-height: 40px;
+    }
+
+    .footer-form-text {
+        text-align: left;
     }
 
     /* /Tablet-footer-styles */
@@ -1363,6 +1360,8 @@ screen and (min-device-pixel-ratio: 2) {
         padding-right: 0;
         max-width: 100%;
         width: 1158px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
     .logo-text-container {
