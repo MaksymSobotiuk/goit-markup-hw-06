@@ -518,6 +518,11 @@ body {
 }
 
 
+.footer-form {
+    display: flex;
+    gap: 24px;
+}
+
 .footer-form-text {
     margin-bottom: 16px;
     color: #FFFFFF;
@@ -526,11 +531,6 @@ body {
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
-}
-
-.footer-form {
-    display: flex;
-    gap: 24px;
 }
 
 .footer-form-field {
