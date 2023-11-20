@@ -45,8 +45,8 @@ body {
 }
 
 .container {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 .visually-hidden {
@@ -65,7 +65,7 @@ body {
 
 @media screen and (min-width: 480px) {
     .container {
-        width: 318px;
+        width: 320px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -80,8 +80,8 @@ body {
     .mobile-open-button {
         border: none;
         background-color: transparent;
-        padding: 0;
         line-height: 0;
+        padding: 0;
     }
 
     /* Mobile-menu */
@@ -178,6 +178,7 @@ body {
         line-height: 1.2;
         letter-spacing: 0.02em;
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        color: #434455;
     }
 
     .mobile-menu-adress-list-telephone-link {
@@ -233,6 +234,7 @@ body {
     /* /Mobile-menu */
 }
 
+/* Header-mobile styles */
 .page-header {
     padding-top: 16px;
     padding-bottom: 16px;
@@ -488,8 +490,6 @@ screen and (min-device-pixel-ratio: 2) {
 .portfolio-wrapper {
     padding-top: 96px;
     padding-bottom: 96px;
-    padding-left: 16px;
-    padding-right: 16px;
 }
 
 .portfolio-main-title {
@@ -555,14 +555,11 @@ screen and (min-device-pixel-ratio: 2) {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
-    letter-spacing: 0, 02em;
     padding: 40px 32px;
 }
 
 .portfolio-item {
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    width: 288px;
-    height: 400px;
 }
 
 .portfolio-item:hover {
@@ -617,7 +614,7 @@ screen and (min-device-pixel-ratio: 2) {
     max-width: 320px;
     padding-left: 16px;
     padding-right: 16px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .logo-text-container {
@@ -693,6 +690,12 @@ screen and (min-device-pixel-ratio: 2) {
 
 }
 
+.footer-form-field-label {
+    display: block;
+    margin-bottom: 16px;
+
+}
+
 .footer-form-field {
     height: 40px;
     border: 1px solid #ffffff;
@@ -704,16 +707,25 @@ screen and (min-device-pixel-ratio: 2) {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     color: #ffffff;
-    margin-bottom: 16px;
 }
 
 
+@media screen and (max-width: 767px) {
+    .footer-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
 .footer-sub-button {
-    min-width: 165px;
-    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 165px;
+    padding: 8px 24px;
     font-family: "Roboto", sans-serif;
     font-size: 16px;
     font-weight: 500;
@@ -724,8 +736,6 @@ screen and (min-device-pixel-ratio: 2) {
     background-color: #4D5AE5;
     border: none;
     border-radius: 4px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .footer-sub-button-icon {
@@ -988,7 +998,7 @@ screen and (min-device-pixel-ratio: 2) {
 
 @media screen and (min-width: 768px) {
     .container {
-        width: 766px;
+        width: 768px;
     }
 
     /* Header-tablet-styles */
@@ -1158,15 +1168,11 @@ screen and (min-device-pixel-ratio: 2) {
     /* /Tablet-team-styles */
 
     /* Tablet-portfotio-styles */
-    .portfolio-wrapper {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
 
     .portfolio-list {
         flex-direction: row;
         flex-wrap: wrap;
-        row-gap: 64px;
+        row-gap: 72px;
         column-gap: 24px;
     }
 
@@ -1199,6 +1205,9 @@ screen and (min-device-pixel-ratio: 2) {
         text-align: left;
     }
 
+    .footer-form-field-label {
+        margin: 0;
+    }
 
     .footer-form-field {
         width: 264px;
