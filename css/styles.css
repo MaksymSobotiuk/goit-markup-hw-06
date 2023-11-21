@@ -1244,6 +1244,8 @@ screen and (min-device-pixel-ratio: 2) {
 @media screen and (min-width: 1158px) {
     .container {
         width: 1158px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
     /* header-Desctop-styles */
@@ -1302,6 +1304,7 @@ screen and (min-device-pixel-ratio: 2) {
     .features-list {
         flex-wrap: wrap;
         flex-direction: row;
+        align-items: stretch;
     }
 
     .features-item {
